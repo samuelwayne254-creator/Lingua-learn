@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>LinguaLearn - Learn Foreign Languages</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="container">
+                <div class="navbar-content">
+                    <div class="navbar-brand">
+                        <h1 class="navbar-title">🌍 LinguaLearn</h1>
+                    </div>
+                    <div class="navbar-menu">
+                        <button class="nav-link active" onclick="app.navigateTo('home')">Home</button>
+                        <button class="nav-link" onclick="app.navigateTo('languages')">Languages</button>
+                        <button class="nav-link" onclick="app.navigateTo('progress')">Progress</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main id="main-content" class="main-content">
+            <!-- Home Page -->
+            <section id="page-home" class="page active">
+                <div class="hero">
+                    <div class="container">
+                        <div class="hero-content">
+                            <div class="hero-text">
+                                <h2 class="hero-title">Learn Languages the Fun Way</h2>
+                                <p class="hero-subtitle">Master vocabulary, ace quizzes, and unlock achievements. Start your language journey today!</p>
+                                <button class="btn btn-primary" onclick="app.navigateTo('languages')">Start Learning →</button>
+                            </div>
+                            <div class="hero-emoji">🎓</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Features Section -->
+                <section class="features">
+                    <div class="container">
+                        <h3 class="section-title">Why LinguaLearn?</h3>
+                        <div class="grid-3">
+                            <div class="feature-card">
+                                <div class="feature-icon">📚</div>
+                                <h4>Interactive Lessons</h4>
+                                <p>Learn through engaging flashcards and real-world examples</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">🎯</div>
+                                <h4>Instant Quizzes</h4>
+                                <p>Test your knowledge with immediate feedback and explanations</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">🏆</div>
+                                <h4>Earn Achievements</h4>
+                                <p>Unlock badges and track your progress with XP and streaks</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Languages Preview -->
+                <section class="languages-preview">
+                    <div class="container">
+                        <h3 class="section-title">Available Languages</h3>
+                        <div class="grid-3">
+                            <div class="language-preview-card" onclick="app.selectLanguage('spanish')">
+                                <div class="language-flag">🇪🇸</div>
+                                <h4>Spanish</h4>
+                                <p>500M+ speakers</p>
+                                <button class="btn btn-small">Learn →</button>
+                            </div>
+                            <div class="language-preview-card" onclick="app.selectLanguage('french')">
+                                <div class="language-flag">🇫🇷</div>
+                                <h4>French</h4>
+                                <p>280M+ speakers</p>
+                                <button class="btn btn-small">Learn →</button>
+                            </div>
+                            <div class="language-preview-card" onclick="app.selectLanguage('japanese')">
+                                <div class="language-flag">🇯🇵</div>
+                                <h4>Japanese</h4>
+                                <p>125M+ speakers</p>
+                                <button class="btn btn-small">Learn →</button>
+                            </div>
+                            <div class="language-preview-card" onclick="app.selectLanguage('german')">
+                                <div class="language-flag">🇩🇪</div>
+                                <h4>German</h4>
+                                <p>130M+ speakers</p>
+                                <button class="btn btn-small">Learn →</button>
+                            </div>
+                            <div class="language-preview-card" onclick="app.selectLanguage('arabic')">
+                                <div class="language-flag">🇸🇦</div>
+                                <h4>Arabic</h4>
+                                <p>422M+ speakers</p>
+                                <button class="btn btn-small">Learn →</button>
+                            </div>
+                            <div class="language-preview-card" onclick="app.selectLanguage('chinese')">
+                                <div class="language-flag">🇨🇳</div>
+                                <h4>Chinese</h4>
+                                <p>1B+ speakers</p>
+                                <button class="btn btn-small">Learn →</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- How It Works -->
+                <section class="how-it-works">
+                    <div class="container">
+                        <h3 class="section-title">How It Works</h3>
+                        <div class="steps">
+                            <div class="step">
+                                <div class="step-number">1</div>
+                                <h4>Choose a Language</h4>
+                                <p>Select from 6 languages and pick your starting level</p>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">2</div>
+                                <h4>Learn Vocabulary</h4>
+                                <p>Master words and phrases with interactive flashcards</p>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">3</div>
+                                <h4>Take Quizzes</h4>
+                                <p>Test your knowledge and earn XP for correct answers</p>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">4</div>
+                                <h4>Track Progress</h4>
+                                <p>Watch your stats grow and unlock achievements</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- CTA Section -->
+                <section class="cta-section">
+                    <div class="container">
+                        <div class="cta-content">
+                            <h3>Ready to Start Learning?</h3>
+                            <p>Join thousands of language learners worldwide</p>
+                            <button class="btn btn-primary btn-large" onclick="app.navigateTo('languages')">Get Started Now →</button>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <!-- Languages Page -->
+            <section id="page-languages" class="page">
+                <div class="container">
+                    <h2 class="page-title">Choose Your Language</h2>
+                    <div class="grid-2">
+                        <div id="language-cards-container"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Lessons Page -->
+            <section id="page-lessons" class="page">
+                <div class="container">
+                    <button class="btn btn-back" onclick="app.navigateTo('languages')">← Back to Languages</button>
+                    <div id="lesson-header"></div>
+                    <div id="lesson-content"></div>
+                </div>
+            </section>
+
+            <!-- Quiz Page -->
+            <section id="page-quiz" class="page">
+                <div class="container">
+                    <button class="btn btn-back" onclick="app.navigateTo('languages')">← Back to Languages</button>
+                    <div id="quiz-content"></div>
+                </div>
+            </section>
+
+            <!-- Progress Page -->
+            <section id="page-progress" class="page">
+                <div class="container">
+                    <h2 class="page-title">Your Progress</h2>
+                    <div id="progress-content"></div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <p>&copy; 2024 LinguaLearn. Learn languages, explore cultures.</p>
+                    <div class="footer-links">
+                        <a href="#" onclick="alert('Privacy Policy')">Privacy</a>
+                        <a href="#" onclick="alert('Terms of Service')">Terms</a>
+                        <a href="#" onclick="alert('Contact: hello@lingualearn.com')">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
